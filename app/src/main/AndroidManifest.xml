@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <application
+        android:name=".AnbarApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AnbarApp"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".AddProductActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".TransactionActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".WarehouseActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".TransferActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".BarcodeScanActivity" android:exported="false" android:parentActivityName=".MainActivity" android:screenOrientation="portrait" />
+        <activity android:name=".PosActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".InvoiceActivity" android:exported="false" android:parentActivityName=".PosActivity" />
+        <activity android:name=".CustomersActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".CustomerDetailActivity" android:exported="false" android:parentActivityName=".CustomersActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".SuppliersActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".SupplierDetailActivity" android:exported="false" android:parentActivityName=".SuppliersActivity" />
+        <activity android:name=".PurchaseActivity" android:exported="false" android:parentActivityName=".SuppliersActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".DashboardActivity" android:exported="false" android:parentActivityName=".MainActivity" />
+        <activity android:name=".LoginActivity" android:exported="false" android:theme="@style/Theme.AnbarApp" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".UsersActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".BackupActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".SecurityActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".BrandingActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ExportActivity" android:exported="false" android:parentActivityName=".MainActivity" />
+        <activity android:name=".IntegrationActivity" android:exported="false" android:parentActivityName=".MainActivity" />
+        <activity android:name=".ColleaguesActivity" android:exported="false" android:parentActivityName=".MainActivity" />
+        <activity android:name=".ColleagueDetailActivity" android:exported="false" android:parentActivityName=".ColleaguesActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".HandoverActivity" android:exported="false" android:parentActivityName=".ColleagueDetailActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".AboutActivity" android:exported="false" android:parentActivityName=".SettingsActivity" />
+        <activity android:name=".SettingsActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".CommercialActivity" android:exported="false" android:parentActivityName=".MainActivity" />
+        <activity android:name=".CommercialDetailActivity" android:exported="false" android:parentActivityName=".CommercialActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".NightlyReportActivity" android:exported="false" android:parentActivityName=".MainActivity" />
+        <activity android:name=".DeliveryActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".CashShiftActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ProformaActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".VisitorOrderActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".GlobalSearchActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".SalesReturnActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ImportDataActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".AdvancedReportsActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".OnboardingActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".SalesListActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".StockTakeActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".HomeInsightsActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ExpensesActivity" android:exported="false" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustResize" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+</manifest>

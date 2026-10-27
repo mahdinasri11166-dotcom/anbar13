@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="شخصی‌سازی و برندینگ"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="نام فروشگاه / برند"
+            app:boxBackgroundMode="outline">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBrandName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="رنگ اصلی"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/layoutColors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="متن پایین فاکتور"
+            app:boxBackgroundMode="outline">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etInvoiceFooter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:maxLines="3" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="میانبرهای صفحه اصلی (حداکثر ۳ مورد)"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbPos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="صندوق فروش (POS)"
+            android:checked="true" />
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbCustomers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="مشتریان"
+            android:checked="true" />
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تحلیل‌ها"
+            android:checked="true" />
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbSuppliers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تامین‌کنندگان" />
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbScan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="اسکن بارکد" />
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ورود کالا" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveBranding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="ذخیره"
+            app:backgroundTint="@color/primary" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/settings" android:textSize="20sp" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:layout_marginBottom="16dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/language" android:textColor="@color/text_secondary" android:textSize="13sp" />
+        <RadioGroup android:id="@+id/rgLanguage" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginBottom="12dp">
+            <RadioButton android:id="@+id/rbFa" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/lang_fa" />
+            <RadioButton android:id="@+id/rbEn" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/lang_en" />
+            <RadioButton android:id="@+id/rbAr" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/lang_ar" />
+        </RadioGroup>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/theme" android:textColor="@color/text_secondary" android:textSize="13sp" />
+        <RadioGroup android:id="@+id/rgTheme" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginBottom="16dp">
+            <RadioButton android:id="@+id/rbThemeLight" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/theme_light" />
+            <RadioButton android:id="@+id/rbThemeDark" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/theme_dark" />
+            <RadioButton android:id="@+id/rbThemeSystem" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/theme_system" />
+        </RadioGroup>
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="نام فروشگاه" app:boxBackgroundMode="outline">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etShopName"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="آدرس فروشگاه" app:boxBackgroundMode="outline">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etShopAddress"
+                android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="تلفن فروشگاه" app:boxBackgroundMode="outline">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etShopPhone"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="@string/vat_percent" app:boxBackgroundMode="outline">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etVatDefault"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="امتیاز به ازای مبلغ" app:boxBackgroundMode="outline">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPointsRate"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <androidx.appcompat.widget.SwitchCompat android:id="@+id/switchSms" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="فعال‌سازی ارسال پیامک" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp"
+            android:text="واحد پول" android:textColor="@color/text_secondary" android:textSize="13sp" />
+        <Spinner android:id="@+id/spinnerCurrency" android:layout_width="match_parent" android:layout_height="48dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="تقویم تاریخ (فاکتور و گزارش)"
+            android:textColor="@color/text_primary" android:textStyle="bold" />
+        <Spinner android:id="@+id/spinnerCalendar" android:layout_width="match_parent" android:layout_height="48dp" />
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="نرخ دلار (تومان)" app:boxBackgroundMode="outline">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etRateUsd"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="نرخ تتر (تومان)" app:boxBackgroundMode="outline">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etRateUsdt"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/primary_soft" app:cardCornerRadius="16dp" app:cardElevation="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="تاریخ و ساعت برنامه" android:textStyle="bold" android:textSize="15sp" />
+                <TextView android:id="@+id/tvAppDate" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textSize="16sp" />
+                <TextView android:id="@+id/tvAppClock" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/primary"
+                    android:textSize="20sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tvClockStatus" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/text_secondary" android:textSize="12sp" />
+                <TextView android:id="@+id/tvLastChange" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/text_secondary" android:textSize="12sp" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnSyncClock"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:text="همگام‌سازی با اینترنت" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:text="امنیت و حالت صندوق"
+            android:textStyle="bold" android:textColor="@color/text_primary" />
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchCashierOnly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="حالت فقط صندوق (منوی محدود فروشگاه)" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="خروج خودکار (دقیقه، 0=خاموش)">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAutoLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchInvoicePoetry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="شعر مولانا در فاکتور" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="یادداشت ثابت فاکتور">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etInvoiceExtra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnSaveSettings"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" android:text="@string/save" app:backgroundTint="@color/primary" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnAbout"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="@string/about" />
+    </LinearLayout>
+</ScrollView>
